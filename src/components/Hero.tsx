@@ -1,4 +1,4 @@
-import React from 'react'
+
 import pizza from '../assets/hero.png'
 
 function Hero() {

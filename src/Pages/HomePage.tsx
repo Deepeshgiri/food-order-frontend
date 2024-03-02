@@ -1,8 +1,8 @@
-import React from "react";
+
 import landing from "../assets/landing.png";
 import appdownload from "../assets/appDownload.png";
-import { Button } from "@/components/ui/button";
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+
 function HomePage() {
   
   return (
