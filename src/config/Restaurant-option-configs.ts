@@ -1,0 +1,38 @@
+
+
+    export const cuisineList = [
+      "Afghan",
+      "Albanian",
+      "Algerian",
+      "American",
+      "Andorran",
+      "Angolan",
+      "Antigua and Barbuda",
+      "Argentine",
+      "Armenian",
+      "Australian",
+      "Austrian",
+      "Azerbaijani",
+      "Bahamian",
+      "Bahraini",
+      "Bangladeshi",
+      "Barbadian",
+      "Belarusian",
+      "Belgian",
+      "Belizean",
+      "Beninese",
+      "Bhutanese",
+      "Bolivian",
+      "Bosnian",
+      "Botswanan",
+      "Brazilian",
+      "British",
+      "Bruneian",
+      "Bulgarian",
+      "Burkinabe",
+      "Burmese",
+      "Burundian",
+      "Cafe",
+    ];
+  
+  

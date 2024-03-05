@@ -4,8 +4,15 @@ import { Navigate, Outlet } from 'react-router-dom'
 
 const ProtectedRoute =()=> {
 //it is used to protect route or route controller
-    const {isAuthenticated}= useAuth0()
-  return  isAuthenticated ? <Outlet/>: <Navigate to='/' replace />
+    const {isAuthenticated, isLoading}= useAuth0()
+    if(isLoading){
+      return null
+    }
+
+    if(isAuthenticated){
+      return <Outlet/>
+    }
+  return   <Navigate to='/' replace />
   
     
   
