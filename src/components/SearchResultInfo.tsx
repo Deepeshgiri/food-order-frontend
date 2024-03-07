@@ -17,7 +17,7 @@ export default function SearchResultInfo({ total, city }: Props) {
           Change Location
         </Link>
       </span>
-      <span>insert sort dropdown here</span>
+      
     </div>
   );
 }
