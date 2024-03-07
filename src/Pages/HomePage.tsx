@@ -21,7 +21,7 @@ function HomePage() {
         </h1>
         
         <span className="text-xl"> Food is just a click away!!</span>
-        <SearchBar placeHolder="Search by city" onSubmit={handleSearchSubmit} searchQuery={""}/>
+        <SearchBar placeHolder="Search by city" onSubmit={handleSearchSubmit}/>
       </div>
       <div className="grid md:grid-cols-2 gap-5">
         <img src={landing} alt="landing" />

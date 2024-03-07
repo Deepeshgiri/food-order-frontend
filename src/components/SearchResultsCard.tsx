@@ -27,7 +27,7 @@ export default function SearchResultsCard({ restaurant }: Props) {
         <div className="flex flex-row flex-wrap">
           {restaurant.cuisines.map((item, index) => (
             <span className="flex">
-              <span>{item}</span>
+              <span key={index}>{item}</span>
               {index < restaurant.cuisines.length - 1 && <Dot />}
             </span>
           ))}

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 type Props = {
   total: number;
-  city: string;
+  city?: string;
 };
 
 export default function SearchResultInfo({ total, city }: Props) {

@@ -11,11 +11,11 @@ export type SearchState = {
 
 function SearchPage() {
   const { city } = useParams();
-  const { results, isLoading } = useSearchRestaurants(city);
+ 
   const [searchState, setSearchState] = useState<SearchState>({
     searchQuery: "",
   });
-  
+  const { results, isLoading } = useSearchRestaurants(searchState, city);
   const setSearchQuery = (searchFormData: SearchForm) => {
     setSearchState((prevState) => ({
       ...prevState,
