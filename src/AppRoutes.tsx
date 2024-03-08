@@ -8,6 +8,7 @@ import ProtectedRoute from "./auth/ProtectedRoute";
 
 import ManageRestaurantPage from "./Pages/ManageRestaurantPage";
 import SearchPage from "./Pages/SearchPage";
+import RestaurantDetailPage from "./Pages/RestaurantDetailPage";
 
 const AppRoutes = () => {
   return (
@@ -21,7 +22,22 @@ const AppRoutes = () => {
         }
       />
       <Route path="/auth-callback" element={<AuthCallbackPage />} />
-<Route path="/search/:city" element={<Layout showHero={false}><SearchPage/></Layout>}/>
+      <Route
+        path="/search/:city"
+        element={
+          <Layout showHero={false}>
+            <SearchPage />
+          </Layout>
+        }
+      />
+      <Route
+        path="/detail/:restaurantId"
+        element={
+          <Layout showHero={false}>
+            <RestaurantDetailPage />
+          </Layout>
+        }
+      />
       <Route element={<ProtectedRoute />}>
         <Route
           path="/user-profile"
@@ -35,7 +51,7 @@ const AppRoutes = () => {
           path="/manage-restaurant"
           element={
             <Layout>
-              <ManageRestaurantPage  />
+              <ManageRestaurantPage />
             </Layout>
           }
         />
