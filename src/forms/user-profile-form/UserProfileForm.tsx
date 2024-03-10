@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
+
 import { useEffect } from "react";
 
 import { useForm } from "react-hook-form";
@@ -26,15 +27,17 @@ const formSchema = z.object({
   pincode: z.string().min(1, "pincode is required"),
 });
 
-type UserFormData = z.infer<typeof formSchema>;
+export type UserFormData = z.infer<typeof formSchema>;
 
 type props = {
   currentUser: User;
   onSave: (userProfileData: UserFormData) => void;
   isLoading: boolean;
+  title?:string
+  buttonText?:string
 };
 
-function UserProfileForm({ onSave, isLoading, currentUser }: props) {
+function UserProfileForm({ onSave, isLoading, currentUser, title="User Profile" , buttonText="Submit" }: props) {
   const form = useForm<UserFormData>({
     resolver: zodResolver(formSchema),
     defaultValues: currentUser,
@@ -51,7 +54,7 @@ function UserProfileForm({ onSave, isLoading, currentUser }: props) {
         className="space-y-4 bg-gray-100 rounded-lg md:p-10"
       >
         <div>
-          <h2 className="text-2xl font-bold">User profile Form</h2>
+          <h2 className="text-2xl font-bold">{title}</h2>
           <FormDescription className="font-bold">
             view and change your profile information here!
           </FormDescription>
@@ -143,7 +146,7 @@ function UserProfileForm({ onSave, isLoading, currentUser }: props) {
           <LoadingButton />
         ) : (
           <Button type="submit" className="bg-orange-500">
-            Submit
+            {buttonText}
           </Button>
         )}
       </form>
